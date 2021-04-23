@@ -74,55 +74,55 @@
         //     $('input').off('focus') 
         // });
         //25
-        $(document).ready(function() {
-            $('div#form1').append(
-                $('<input>', {
-                    type: 'text',
-                    id: 'vname',
-                    name: 'name',
-                    placeholder: 'Your Name'
-                }),
-                $('<input>', {
-                    type: 'text',
-                    id: 'vemail',
-                    name: 'email',
-                    placeholder: 'Your Email'
-                }), $('<br/>'), $('<input/>', {
-                    type: 'submit',
-                    id: 'submit',
-                    value: 'Submit'
-                }));
-            $('div#form1').focus();
-            $('submit').click(function(event) {
-                let isValid = true;
-                let enterName = $('#vname').val().trim();
-                if (enterName == '') {
-                    $('#vname').next().text('This field is required');
-                    isValid = false;
-                    $('#vname').css('border','1px').css('color','red');
-                } else {
-                    $('#vname').next().text('');
-                }
-                $('#vname').val(enterName).css('border','1px').css('color','green');
+        // $(document).ready(function() {
+        //     $('div#form1').append(
+        //         $('<input>', {
+        //             type: 'text',
+        //             id: 'vname',
+        //             name: 'name',
+        //             placeholder: 'Your Name'
+        //         }),
+        //         $('<input>', {
+        //             type: 'text',
+        //             id: 'vemail',
+        //             name: 'email',
+        //             placeholder: 'Your Email'
+        //         }), $('<br/>'), $('<input/>', {
+        //             type: 'submit',
+        //             id: 'submit',
+        //             value: 'Submit'
+        //         }));
+        //     $('div#form1').focus();
+        //     $('submit').click(function(event) {
+        //         let isValid = true;
+        //         let enterName = $('#vname').val().trim();
+        //         if (enterName == '') {
+        //             $('#vname').next().text('This field is required');
+        //             isValid = false;
+        //             $('#vname').css('border','1px').css('color','red');
+        //         } else {
+        //             $('#vname').next().text('');
+        //         }
+        //         $('#vname').val(enterName).css('border','1px').css('color','green');
 
-                var emailPattern = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b/;
-                let enterEmail = $('#vemail').val().trim();
-                if (enterEmail == '') {
-                    $('#vemail').next().text('Must be a valid email address.');
-                    isValid = false;
-                } else if ( !emailPattern.test(enterEmail)) {
-                    $('#vemail').next().text('Must be a valid email address.');
-                    $('#email').css('border','1px').css('color','red');
-                    isValid = false;
-                } else {
-                    $('#vemail').val(email);
-                }
-                $('#vemail').val(email).css('border','1px').css('color','green');
+        //         var emailPattern = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b/;
+        //         let enterEmail = $('#vemail').val().trim();
+        //         if (enterEmail == '') {
+        //             $('#vemail').next().text('Must be a valid email address.');
+        //             isValid = false;
+        //         } else if ( !emailPattern.test(enterEmail)) {
+        //             $('#vemail').next().text('Must be a valid email address.');
+        //             $('#email').css('border','1px').css('color','red');
+        //             isValid = false;
+        //         } else {
+        //             $('#vemail').val(email);
+        //         }
+        //         $('#vemail').val(email).css('border','1px').css('color','green');
 
-                if(isValid == false) {
-                    event.preventDefault();
-                }
-            })                   
-        });   
+        //         if(isValid == false) {
+        //             event.preventDefault();
+        //         }
+        //     })                   
+        // });   
     });
 
